@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Extractable v0.1 by bhaskey</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Extractable v0.1</h1>
+        <p>Extract a large table into CSV file.</p>
+
+        <p class="view"><a href="https://github.com/bhaskey/extractable_v0.1">View the Project on GitHub <small>bhaskey/extractable_v0.1</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/bhaskey/extractable_v0.1/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/bhaskey/extractable_v0.1/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/bhaskey/extractable_v0.1">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="extractable_v01" class="anchor" href="#extractable_v01" aria-hidden="true"><span class="octicon octicon-link"></span></a>extractable_v0.1</h1>
+
+<p>Extract a large table into CSV file.</p>
+
+<p>ETL testing involves comparing source files with the loaded staging tables. Often the source files contains large data rows. Testing the flat load from source files to staging table requires one to one row comparison. Extracting the large table into CSV or excel files is challenge because of buffer size and cache limits of database tools. It gets more complicated when there is no unique keys in the data. The developed system resolves this problem and also provides a very flexible set of opportunities to get it done in few seconds.</p>
+
+<h1>
+<a id="system-requirements" class="anchor" href="#system-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Requirements</h1>
+
+<p>JRE 7 or above</p>
+
+<h1>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h1>
+
+<p>• Unzip the downloaded package at your desired directory.</p>
+
+<p>• Configure the db file available under resources/ directory. (Follow configuration guide given in next topic.)</p>
+
+<p>• Open command prompt.</p>
+
+<p>• Go to the directory where the package is unzipped.</p>
+
+<p>• Run the command in command prompt: java –jar extractable_v0.1.jar </p>
+
+<p>• Your desired CSV files will be created in your root directory.</p>
+
+<h1>
+<a id="db-properties-configuration-guide" class="anchor" href="#db-properties-configuration-guide" aria-hidden="true"><span class="octicon octicon-link"></span></a>db properties Configuration Guide</h1>
+
+<p>The file contains database and other configurations:</p>
+
+<p>• Database configuration:</p>
+
+<p>DB_DRIVER_CLASS=com.mysql.jdbc.Driver</p>
+
+<p>DB_URL=jdbc:mysql://:/</p>
+
+<p>DB_USERNAME=</p>
+
+<p>DB_PASSWORD=</p>
+
+<p>• This is the table you want to extract:</p>
+
+<p>TABLENAME=</p>
+
+<p>• This is the column name, if you want to split your files on based of some column values.</p>
+
+<p>COL=</p>
+
+<p>• Provide values (or set of values) for the splitting column.</p>
+
+<p>GRP1='3','4'</p>
+
+<p>GRP2='17'</p>
+
+<p>GRP3=</p>
+
+<p>GRP4=</p>
+
+<p>• If you leave all GRP variable blank, one file will be created with all data.</p>
+
+<p>• Otherwise: Files with GRP values will be created,</p>
+
+<p>• One more file will be created with NOT IN given values.</p>
+
+<p>Few notes: </p>
+
+<p>• No Comma at the end. (eg. ‘1’,’2’,) </p>
+
+<p>• No blank GRP in between. (eg. GRP1= GRP=’1’,’2’)</p>
+
+<p>• One more file will be created with NOT IN given values.</p>
+
+<p>Please feel free to suggest an improvement. </p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/bhaskey">bhaskey</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
