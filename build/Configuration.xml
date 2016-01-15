@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project extractable with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="D:/workspaceDS"/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/extractable_v0.1.jar">
+            <manifest>
+                <attribute name="Main-Class" value="com.cognizant.bhaskar.Main"/>
+                <attribute name="Class-Path" value=". extractable_v0.1_lib/mysql-connector-java-5.1.21.jar extractable_v0.1_lib/opencsv-2.3.jar"/>
+            </manifest>
+            <fileset dir="C:/Users/360758/git/extractable_v0.1/extractable/bin"/>
+        </jar>
+        <delete dir="${dir.jarfile}/extractable_v0.1_lib"/>
+        <mkdir dir="${dir.jarfile}/extractable_v0.1_lib"/>
+        <copy file="D:/bhaskey/jars/jars/mysql-connector-java-5.1.21.jar" todir="${dir.jarfile}/extractable_v0.1_lib"/>
+        <copy file="D:/bhaskey/jars/jars/opencsv-2.3.jar" todir="${dir.jarfile}/extractable_v0.1_lib"/>
+    </target>
+</project>
