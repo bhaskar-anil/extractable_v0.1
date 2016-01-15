@@ -1,6 +1,6 @@
 # extractable_v0.1
 
-Extract a large table into CSV file.
+Extract/import a large table into CSV file.
 
 ETL testing involves comparing source files with the loaded staging tables. Often the source files contains large data rows. Testing the flat load from source files to staging table requires one to one row comparison. Extracting the large table into CSV or excel files is challenge because of buffer size and cache limits of database tools. It gets more complicated when there is no unique keys in the data. The developed system resolves this problem and also provides a very flexible set of opportunities to get it done in few seconds.
 
